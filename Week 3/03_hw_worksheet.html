@@ -26,8 +26,8 @@
         
         //2. Declare SVG width and height in pixels (remember the ; after declaring variables!)
             
-            //TODO: const 
-            //TODO: const
+            const svgWidth = 500;
+            const svgHeight = 500;
 
 
         //3. Create our SVG element, applying the SVG (canvas) width and height 
@@ -38,8 +38,10 @@
                                 // .append()
                                 // .attr() 
                                 // .attr(); //Hint: don't delete this ending ;
-
-
+                    const svg = d3.select("body")
+                        .append("svg")
+                        .attr("width", svgWidth)
+                        .attr("height", svgHeight);
             
         //4. Use "circle" (not "rect") and add them to SVG to visualize our data. 
             
@@ -47,7 +49,16 @@
         x,y,width,height. But, "circle" requires different parameters
         (3 in total)-check today's slide deck.*/ 
         //TIP: get the circles showing before you attempt the labels (step 5) 
-            
+
+                    svg.selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", d => {data[0]})
+                            .attr("cy", d => {data[1]})
+                            .attr("r", d => 10);
+
+                    
             //TODO: svg.selectAll()
                         // .data()
                         // .enter()
