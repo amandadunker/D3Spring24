@@ -1,6 +1,7 @@
 ## Week 3 Homework 
 ### Task: Create a scatterplot using SVG
 
-This is a scatterplot made from an array with eight pairs of data. 
+This is a scatterplot made from an array with eight pairs of data. Revised to flip y-values.
 
-![homework3](https://github.com/amandadunker/D3Spring24/assets/93752687/bcd1a3d2-eb4b-40bc-808e-63d1271f2338)
+
+![hw1 revised](https://github.com/amandadunker/D3Spring24/assets/93752687/fbb82867-0dbc-48b0-893a-9e14f5752fab)
