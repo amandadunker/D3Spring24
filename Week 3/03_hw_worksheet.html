@@ -33,7 +33,7 @@
                 .enter()
                 .append("circle")
                 .attr("cx",(d,i) => data[i][0])
-                .attr("cy",(d,i) => data[i][1])
+                .attr("cy",(d,i) => svgHeight - data[i][1])
                 .attr("r", 15)
                 .attr("fill", "pink")
                 .attr("stroke", "black");
@@ -45,7 +45,7 @@
             .append("text")
             .text(d =>d)
             .attr("x", (d,i) => data[i][0] -50)
-            .attr("y", (d,i) => data[i][1] -18)
+            .attr("y", (d,i) => svgHeight - data[i][1] -18)
             .attr("fill", "green")
             .attr("font-weight", "bold");
 
