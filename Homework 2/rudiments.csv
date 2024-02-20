@@ -1,0 +1,34 @@
+﻿Day,one_min,two_min,three_min,four_min,rudiment,primary_note,total_hits
+1,110,100,90,90,singlestrokeroll,bad,3760
+2,115,110,105,95,singlestrokeroll,pattern,4120
+3,120,110,105,95,singlestrokeroll,bad,4140
+4,115,115,110,100,singlestrokeroll,pattern,4300
+5,120,115,110,100,singlestrokeroll,,4320
+6,125,120,115,100,singlestrokeroll,,4440
+7,125,120,110,105,singlestrokeroll,,4460
+8,130,125,90,80,singlestrokeroll,stiff left wrist,3880
+9,130,125,115,100,singlestrokeroll,,4500
+10,130,125,120,120,singlestrokeroll,,4880
+11,135,130,125,120,singlestrokeroll,,5000
+12,135,135,130,125,singlestrokeroll,,5180
+13,140,135,130,120,singlestrokeroll,,5120
+14,140,135,130,125,singlestrokeroll,,5200
+15,140,135,130,125,singlestrokeroll,,5200
+16,145,140,125,120,singlestrokeroll,,5120
+17,145,140,135,125,singlestrokeroll,,5320
+18,145,140,135,130,singlestrokeroll,,5400
+19,145,140,130,125,singlestrokeroll,,5260
+20,145,140,130,125,singlestrokeroll,,5260
+21,150,150,140,130,singlestrokeroll,,5560
+22,150,145,135,125,singlestrokeroll,,5380
+23,150,145,135,130,singlestrokeroll,,5460
+24,150,145,135,125,singlestrokeroll,,5380
+25,150,145,135,130,singlestrokeroll,,5460
+26,155,150,140,130,singlestrokeroll,,5580
+27,155,150,145,135,singlestrokeroll,,5720
+28,155,150,145,140,singlestrokeroll,,5800
+29,160,155,150,145,singlestrokeroll,,6000
+30,160,155,150,145,singlestrokeroll,stiff left wrist,6000
+1,90,85,80,75,paradiddle,losing pattern,3200
+2,95,90,85,80,paradiddle,losing pattern,3400
+3,100,95,90,85,paradiddle,sticks hitting,3600
