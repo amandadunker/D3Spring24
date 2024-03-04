@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Drum Parts I'm Working On by Decade</title>
+        <script src= "https://d3js.org/d3.v7.min.js"></script>
+        <style type="text/css">
+        /* TBD*/
+
+        </style>
+
+    </head>
+    <body>
+        <script type="text/javascript">
+
+//1. Declare consts/global variables
+        const margin = 20;
+        const svgWidth = 500; 
+        const svgHeight = 500;
+        const padding = .02; 
+        
+//2. Load data and relevant variables
+d3.csv("decades.csv").then(data => {
+    console.log("data", data)
+
+    //format data
+    data.forEach(d => {
+        d.Decade = d.Decade;
+        d.Count = +d.Count;
+    });
+
+    const maxY = d3.max(data, d => d.Count);
+
+//3. Scale using d3.max. 
+
+    const xScale = d3.scaleBand()
+                    .domain(data.map(d => d.Decade))
+                    .range([margin, svgWidth - margin])
+                    .paddingInner(padding);
+
+    const yScale = d3.scaleLinear()
+                    .domain([0, maxY + .5])
+                    .range([svgHeight - margin, margin]);
+
+//4. SVG
+const svg = d3.select("body")
+                .append("svg")
+                .attr("width", svgWidth)
+                .attr("height", svgHeight);
+
+//background color 
+svg.append("rect")
+.attr("width", svgWidth)
+.attr("height", svgHeight)
+.attr("fill", "#b6cad5")
+
+
+//5. Create and implement axes
+
+    //create bottom (x) axis
+    const bottomAxis = d3.axisBottom()
+                        .scale(xScale)
+
+
+    //implement x axis
+    svg.append("g")
+        .attr("transform", "translate(0," + (svgHeight -margin) + ")")
+        .call(bottomAxis);
+
+    //create left(y) axis
+    const leftAxis = d3.axisLeft()
+                        .scale(yScale)
+                        .ticks(5);
+
+    //implement y axis
+    svg.append("g")
+        .attr("transform", "translate(" + margin + ",0)")
+        .call(leftAxis);
+
+//6. Create bars
+svg.selectAll("null")
+    .data(data)
+    .enter()
+    .append("rect")
+    .attr("x", d => xScale(d.Decade))
+    .attr("y", d => yScale(d.Count))
+    .attr("width", xScale.bandwidth())
+    .attr("height", d => (svgHeight - margin) - yScale(d.Count))
+    .attr("fill", "#670126");
+//It was dropping my first value. I found the solution to that here: https://stackoverflow.com/questions/54373388/missing-first-value-while-creating-a-bar-graph
+
+//7. Title
+    svg.append('text')
+        .attr('x', svgWidth/2)
+        .attr('y', 40)
+        .attr('text-anchor', 'middle')
+        .attr("font-family", "Impact")
+        .attr("font-weight", 600)
+        .attr("fill", "#f9be94")
+        .attr("stroke","#0a1fae")
+        .attr("stroke-width", "4px")
+        .attr("font-size", "40px")
+        .attr("paint-order", "stroke fill")
+        .text('DRUM PARTS BY DECADE');
+
+});
+
+// Source for outlining the text: Sam Learner, "Outlined SVG Text Example," Observable,  17 July 2022, https://observablehq.com/@sdl60660/outlined-text-example
+
+//Rio album cover color palette: lipstick: #832b39, background: #670126, earrings: #9871aa, skin: #f8f8f6, upper right corner: #8b94cb, neon blue font outline: #0a1fae, main font: #b6cad5, gold stripe: #f9be94. Closest font is BioRhyme. 
+
+</script>
+</body>
+</html>
