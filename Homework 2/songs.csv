@@ -1,17 +1,33 @@
-﻿Song,Artist,Year,BPM,Decade
-Rave On!,Buddy Holly,1958,160,1950s
-Ooby Dooby,Roy Orbison,1961,181,1960s
-Needles and Pins,The Searchers,1963,124,1960s
-Ballroom Blitz,Sweet,1974,108,1970s
-Outdoor Miner,Wire,1978,124,1970s
-Gimme! Gimme! Gimme! (A Man After Midnight),Abba,1979,120,1970s
-Going Underground,The Jam,1980,181,1980s
-Who Can It Be Now,Men At Work,1981,128,1980s
-You Make My Dreams (Come True),Hall & Oates,1981,167,1980s
-Young Turks,Rod Stewart,1981,161,1980s
-Beds Are Burning,Midnight Oil,1987,119,1980s
-The Ballad of Peter Pumpkinhead,XTC,1992,122,1990s
-Juicy,The Notorious B.I.G,1994,96,1990s
-You Know I'm No Good,Amy Winehouse,2006,103,2000s
-Work It,Missy Elliott,2002,102,2000s
-The Less I Know the Better,Tame Impala,2015,117,2010s
+﻿Song,Artist,Year,BPM,Length,Decade,Personnel,Album,Constant,Right Foot Independence,Right Hand,Right Foot Speed or Stamina,Consistency,Speed,Shuffle,Fills/Switching Hands,16th Note Beat,Triplet,Hi-Hat Pedal,Swung Notes (or Swung Feel),Ghost Notes
+Folsom Prison Blues,Johnny Cash,1955,111,02:35,1950s,W.S. Holland (drummer),Johnny Cash with His Hot and Blue Guitar!,300,,,,,1,1,,,,,,
+Rave On!,Buddy Holly,1958,160,01:49,1950s,Jerry Allison (drummer),Buddy Holly,300,,1,,,1,,,,,,1,
+I Forgot to Remember to Forget,Elvis Presley,1959,113,02:38,1950s,Johnny Bernero,A Date with Elvis,300,,1,,,,,,,,,1,1
+Ooby Dooby,Roy Orbison,1961,181,02:10,1960s,Billy Pat Ellis (drummer),Roy Orbison at the Rock House,300,,,,,1,,,,1,,1,
+Needles and Pins,The Searchers,1963,124,02:11,1960s,Chris Curtis (drummer),Meet the Searchers,300,,,,,,,1,,,,,
+Manic Depression,The Jimi Hendrix Experience,1967,150,03:42,1960s,Mitch Mitchell (drummer),Are You Experienced,300,1,,,,1,,,,1,,,
+Black Night,Deep Purple,1970,139,03:27,1970s,Ian Paice (drummer),Deep Purple in Rock,300,1,,1,,1,,,,1,,1,
+Ballroom Blitz,Sweet,1974,108,04:06,1970s,Mick Tucker (drummer),Desolation Boulevard,300,1,,,,1,,,,,,1,
+Jolene,Dolly Parton,1974,111,02:41,1970s,Jerry Carrigan,Jolene,300,,1,,,,,,,,,,
+All I Want is You,Roxy Music,1974,126,02:53,1970s,Paul Thomson (drummer),Country Life,300,,,,,,,,,,,,
+Outdoor Miner,Wire,1978,124,01:44,1970s,Robert Grey (drummer),Chairs Missing,300,1,,,,,,1,,,,,
+Just What I Needed,The Cars,1978,124,03:45,1970s,David Robinson (drummer),The Cars,300,,,1,,,,,,,,,
+Teenage Kicks,The Undertones,1978,135,02:26,1970s,Billy Doerty (drummer),The Undertones,300,,,,,,,,,,,,
+Gimme! Gimme! Gimme! (A Man After Midnight),Abba,1979,120,04:52,1970s,Ola Brunkert (drummer),Greatest Hits Vol. 2,300,,,,1,,,,,,1,,
+Making Plans for Nigel,XTC,1979,150,04:13,1970s,Terry Chambers (drummer),Drums and Wires,300,,1,,,,,,,,,,
+Ashes to Ashes,David Bowie,1980,120,04:26,1980s,Dennis Davis (drummer),Scary Monsters (and Super Creeps),300,,,1,1,,,,,,1,,
+Going Underground,The Jam,1980,181,02:54,1980s,Rick Buckler (drummer),Non-album single,300,,1,1,,1,,,,,,,
+Love Will Tear Us Apart,Joy Division,1980,147,03:28,1980s,Stephen Morris (drummer),Non-album single,300,,,1,,1,,,1,,,,
+9 to 5,Dolly Parton,1980,100,02:42,1980s,Rick Schlosser,9 to 5 and Odd Jobs,300,,,,,,,,,,1,,
+Young Turks,Rod Stewart,1981,161,04:38,1980s,Carmine Appice (hi-hats and programming),Tonight I'm Yours,300,,,1,,1,,,,,,,
+Who Can It Be Now,Men At Work,1981,128,03:21,1980s,Jerry Speiser (drummer),Business as Usual,300,,1,,,,,1,,,,,
+You Make My Dreams (Come True),Hall & Oates,1981,167,03:10,1980s,Jerry Marotta (drummer),Voices,300,,,,1,,,,,,,,
+True Faith,New Order,1987,117,05:55,1980s,"Stephen Morris (hi-hat, cymbals, and programming",Substance 1987,300,,,1,,1,,,1,,,,
+Beds Are Burning,Midnight Oil,1987,119,04:15,1980s,Rob Hirst (drummer),Diesel and Dust,300,,,,1,,,,,,,,
+Yer So Bad,Tom Petty,1990,90,03:05,1990s,Phil Jones (drummer),Full Moon Fever,300,,,1,1,,,,,,,,
+The Ballad of Peter Pumpkinhead,XTC,1992,122,05:02,1990s,Dave Mattacks (drummer),Nonsuch,300,1,,,1,,,,,,,,
+Juicy,The Notorious B.I.G,1994,96,05:01,1990s,Poke and Sean Combs (producers),Ready to Die,300,,,,1,,,,1,,,,
+Voyager,Daft Punk,2001,120,03:47,2000s,Daft Punk (producers),Discovery,300,,,,1,,,,1,,1,,
+Can't Get You Out of My Head,Kylie Minogue,2001,126,03:50,2000s,Cathy Dennis and Rob Davis (producers),Fever,300,,,,1,,,,,,1,,
+Jumpers,Sleater-Kinney,2005,146,04:24,2000s,Janet Weiss (drummer),The Woods,300,,1,,,1,,,,,,,
+You Know I'm No Good,Amy Winehouse,2006,103,04:16,2000s,Homer Steinweiss(drummer),Back to Black,300,1,,,,,,,1,,,,1
+The Less I Know the Better,Tame Impala,2015,117,03:36,2010s,Kevin Parker (drummer),Currents,300,,1,,,,,1,,,,,

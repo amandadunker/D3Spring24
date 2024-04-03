@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Insurance by Borough</title>
+        <script src= "https://d3js.org/d3.v7.min.js"></script>
+        <style type="text/css">
+.button1{
+    background-color:#84a59d;
+    font-size: 18px;
+    border: none;
+    padding: 12px 12px;
+}
+.button2{
+    background-color:#F5CAC3;
+    font-size: 18px;
+    border: none;
+    padding: 12px 12px;
+}
+.button3{
+    background-color:#F28482;
+    font-size: 18px;
+    border: none;
+    padding: 12px 12px;
+}
+.button4{
+    background-color:#F6BD60;
+    font-size: 18px;
+    border: none;
+    padding: 12px 12px;
+}
+        </style>
+    </head>
+    <body>
+
+    <h1> Type of Health Insurance by Borough, 2022</h1>
+    <button class="button1" id="buttonEmployer">Employer</button>
+    <button class="button2" id="buttonMedicaid">Medicaid</button>
+    <button class="button3" id="buttonUninsured">Uninsured</button>
+    <button class="button4" id="buttonMedicare">Medicare</button>
+    <p>Source: American Community Survey Table B27010.</p>
+    <br>
+    
+    <script type="text/javascript">
+    //1. Create constants for the svg  
+         const svgWidth = 1000;
+         const svgHeight = 1000;
+         const margin = 50; 
+         const padding = .1
+        
+    //2. Read in the data and create min/max/extent 
+    d3.csv("byboro.csv").then(data => {
+        console.log("data", data)
+        
+        data.forEach(d => {
+            d.Borough = d.Borough;
+            d.Employer = +d.Employer;
+            d.Medicaid = +d.Medicaid;
+            d.Uninsured = +d.Uninsured;
+            d.Medicare = +d.Medicare;
+        });
+
+    //3. Create the scales
+        const xScale = d3.scaleBand()
+            .domain(data.map(d => d.Borough)) 
+            .range([margin, svgWidth - margin])
+            .paddingInner(padding);
+        
+        const yScale = d3.scaleLinear()
+            .domain([0,.54])
+            .range([svgHeight-margin, margin]);
+
+
+    //4. Create the svg
+    const svg = d3.select("body")
+    .append("svg")
+    .attr("width", svgWidth)
+    .attr("height", svgHeight);
+ 
+    //5. Create and append the x-axis
+    const xAxis = d3.axisBottom()
+    .scale(xScale);
+
+
+    svg.append("g")
+    //.attr("class", "axis") 
+    .attr("transform", "translate(0," + (svgHeight-margin) + ")") 
+    .call(xAxis);
+
+    //6. Create and append the y-axis
+        const yAxis = d3.axisLeft()
+            .scale(yScale)
+            .ticks(12)
+            .tickFormat(d => d * 100 + "%")
+            .tickSize(-svgWidth);
+
+
+       svg.append("g")
+       //.attr("class", "yaxis")
+       .attr("transform", "translate(" + margin + ",0)")
+               .call(yAxis);
+
+    //7. Change data
+    function drawData(which) {
+        const bars = svg.selectAll("rect")
+            .data(data)
+            .join("rect")
+            .attr("x", d => xScale(d.Borough))
+            .attr("y", function(d) {
+                if (which == "Employer") {return yScale(d.Employer);} 
+                else if (which == "Medicaid") {return yScale(d.Medicaid);} 
+                else if (which == "Uninsured") {return yScale(d.Uninsured);} 
+                else if (which == "Medicare") {return yScale(d.Medicare);} 
+                else {return yScale(d.Employer);}
+            })
+            .attr("fill", function(d) {
+                if (which == "Employer") {return "#84A59d";} 
+                else if (which == "Medicaid") {return "#F5CAC3";} 
+                else if (which == "Uninsured") {return "#F28482";} 
+                else if (which == "Medicare") {return "#F6BD60";} 
+                else {return "#84A59d";}
+            })
+            .attr("width", xScale.bandwidth())
+            .attr("height", function(d) {
+                if (which == "Employer") 
+                    {return svgHeight - margin - yScale(d.Employer);} 
+                else if (which == "Medicaid") 
+                    {return svgHeight - margin - yScale(d.Medicaid);} 
+                else if (which == "Uninsured") 
+                    {return svgHeight - margin - yScale(d.Uninsured);} 
+                else if (which == "Medicare") 
+                    {return svgHeight - margin - yScale(d.Medicare);} 
+                else 
+                    {return svgHeight - margin - yScale(d.Employer);}
+            });
+    }
+    
+d3.selectAll("button").on("click", (event, d) => {
+    const selected = event.currentTarget; 
+    if (selected.id == "buttonEmployer") {drawData("Employer")}
+    else if (selected.id == "buttonMedicaid") {drawData("Medicaid")}
+    else if (selected.id == "buttonUninsured") {drawData("Uninsured")}
+    else if (selected.id == "buttonMedicare") {drawData("Medicare")}
+    else {drawData("Employer")}
+})
+drawData("Employer")
+}); 
+          
+        </script>
+    </body>
+
+</html>
